@@ -16,4 +16,10 @@ Tks
     将 NumPy 数组转换为 PyTorch 张量
     return torch.from_numpy(X), torch.from_numpy(y)
 解决问题
-2. 数据可视化部分参考的实现方法有些老，给了警告。使用的Plotly库来创建交互式图表，但是警告提示plotly.graph_objs.Line已被弃用。所以寻找其他新方法，我将 go.Line 替换为 go.Scatter，并设置 mode='lines' 来创建线图。这样可以避免使用已弃用的 Line 对象，同时保持相同的图表效果。
+2. 数据可视化部分参考的实现方法有些老，给了警告。使用的Plotly库来创建交互式图表，但是警告提示plotly.graph_objs.Line已被弃用。所以寻找其他新方法，将 go.Line 替换为 go.Scatter，并设置 mode='lines' 来创建线图。这样可以避免使用已弃用的 Line 对象，同时保持相同的图表效果。
+
+20241018
+前两日复现了单层LSTM对天气的时序数据预测,今日想实现多层LSTM预测,碍于盲审和档案等学校的事情，无新文件上传。
+目前只做了数据集描述和读取，LSTM建模部刚起步，打算实现多层LSTM预测，根据预测效果决定是否加上注意力机制。理论上多层LSTM更能缓解梯度消失问题，改善预测效果。后期优化，保存最佳权重文件。
+
+
